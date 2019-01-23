@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" >
+
+    <title>Lesson 3 | Forms</title>
+  </head>
+  <body>
+      <div class="container-fluid">
+          <!-- container or container-fluid -->
+          <h1>Forms</h1>
+            <form action="welcome.html" autocomplete="" onsubmit="" method="post">
+                <label for="name">Name</label><br> 
+                <input type="text" name="name" id="n1" required placeholder="Name"><br> 
+                
+                <label for="password">Password</label><br>
+                <input type="text" name="password" id="passw" placeholder="Enter Your Password"><br>
+                
+                <label for="phone">phone</label><br>
+                <input type="text" name="phone" id="phone"><br>
+                
+                <label for="date">Date</label> <br>
+                <input type="date" name="date" id="dat"> <br>
+
+                <label for="gender">gender</label><br>
+                Male: <input type="radio" name="gender" id="Male"><br>
+                Female: <input type="radio" name="gender" id="Female">
+
+                <label for="image">Upload an Image</label><br>
+                <input type="file" name="image" id=""><br>
+
+                <label for="city">Select Your City</label><br>
+                <select name="city">
+                    <option value="">Bellingham</option>
+                    <option value="">Seattle</option>
+                    <option value="">Tacoma</option>
+                </select><br>
+
+                <label for="message">Message</label> <br>
+                <textarea name="message" id="" cols="30" rows="5">Enter Text</textarea>
+
+                
+                <br>
+                <input class="btn btn-primary" type="submit" value="Done">
+
+               
+            </form>
+      </div>
+      <hr>
+
+      <h3>Audio</h3>
+      <audio controls autoplay loop muted >
+          <source src="../CS 102/media/audio.mp3" type="audio/mp3">
+      </audio>
+      <hr>
+
+      <h3>Video</h3>
+      <video controls autoplay>
+         <source src="media/Fast Typing - 1656.mp4" type="video/mp4"> 
+      </video>
+
+
+    <div style="margin-top:400px">
+        
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"  ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"  ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" ></script>
+  </body>
+</html>
