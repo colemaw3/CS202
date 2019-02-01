@@ -1,0 +1,141 @@
+Wyatt Coleman
+
+Assignment#1
+
+2/1/2019
+
+
+
+1.)  Use Euclidean algorithm to find the greatest common divisor.
+
+            gcd(2059,2581) = 29.
+
+          2581(1) + 2059(0) = 2581
+
+          2581(1) + 2059(0) = 2059    x1
+
+          2581(1) + 2059(-1) = 522     x3
+
+          2581(-3) + 2059(4) = 493     x1
+
+          2581(4) + 2059(-5) = 29      x17
+
+          2581(-71) + 2059(89) = 0
+
+
+
+2.)  Show that product of three consecutive integers is divisable by 6.
+            We will express the product of three consecutive integers in terms of n, where n is an integer. i.e. (n-1)(n)(n+1). If any of the three integers is zero then the whole product equals zero and any number including 6 is divides zero. i.e.(0/6 = 0). There are two different sequences, when n is odd and when n is even.
+
+    n=odd:(n=2k+1)      ((2k+1)-1) * (2k+1) * ((2k+1)+1)
+                                = (2k) * (2K+1) * (2k +2)
+                                = 2[(2(k^2)+K)(K+1)]
+                                = 2[2k^3 + 3k^3 + K]
+
+
+
+
+
+
+
+
+    n=even:(n=2k)        ((2K)-1) * (2K) * ((2K)+1)
+                                = (2k-1) * (4(k^2) + 2K)
+                                = (8k^3 - 2k) 
+                                = (2k) * [4(k^2)-1]
+
+
+
+
+
+
+3.) Let N be a two digit number. Let M be the number obrtained from N by interchanging its two digits i.e.(N = 25 so M = 52).
+        show that 9|(M - N).
+        
+        (q = 10's place, r = 1's place)
+        N = 10q + r
+        M = 10r + q
+
+        (M - N) = (10r + q) - (10q + r)
+                = 10r + q - 10q - r
+        (M - N) = 9r - 9q.
+        
+    From here we can use T-1.3, Since 9|9, then 9|9r and 9|-9q.
+    Then with T-1.1, we can further say 9|(9r - 9q).
+    With substitution we have know shown 9|(M - N).
+
+
+    Now find all the integers N such that |M - N| = 18.
+                when N= 02,20         (N is a two digit number)
+                        13,31
+                        24,42
+                        35,53
+                        46,64
+                        57,75
+                        68,86
+                        79,97
+        
+4.) Let m and n be integers. Prove that if m*n is odd, then m and n are both odd.
+        P = M*N is odd
+        Q = Both M and N are odd. 
+                                --"T-1.6: The product of two odd numbers is odd"
+        Proof. 
+                Let M,N,F,Q,G,t and C be integers.
+                Suppose M*N = C, and C is an odd number.
+                Then by definition of an odd number, C must be of the form 2K+1 where K is some integer. By proof of contradiction,(P and not Q) we will show that if M and N are not both odd, then C can not be odd.
+        Case1: "One odd, one even"
+                For this case let one varible be odd and the other even. Let G be odd and F be even. By Definition of an even number, F is of the form 2t, where t is some integer. So for G * F, we can exress this as (2K+1)(2t). When we expand we get 4(Kt) + 2t = 2(2(Kt)+t).
+                When we use the colusure property multiple times, our equation looks like this 2(2(Kt)+t) = 2(p + t) "p=2(Kt)"
+                                     = 2(W)  "W = p + t" 
+                Now since G * F = 2W, we have proven that the product will not be odd by definition of an even number.
+        Case2: "Both Even"
+                For this case, we can simply use T-1.6, "The product of two even numbers is even." To show with math lets say G = 2K and F = 2W.
+                                    G * F = (2K)(2W)
+                                          = 4(KW)
+                                          = 2(2(KW))
+                                          = 2Q         "Q = 2(KW)"
+                We can clearing see that 
+5.)Let A and B be odd integers. Prove that A^2 + B^2 is not the square of an integer.
+                                        (A^2 == A*A for this setting, similar with B)
+
+        KNOWN: if A or b is even there are cases where A*A = B*B = C and C is square.
+                i.e.[(3x3) + (4x4) = 25 = (5x5)] 
+
+        P=A and B are odd integers
+        Q=A*A + B*B is not the square of an integer.
+
+        Proof. 
+                Let A and B be odd integers. Suppose that A*A + B*B = C, where C is an integer. By T-1.7, we can write the square of an odd number in the form 8K+1. So lets make A^2 = 8K+1 and B^2 = 8W+1, where K and W are some integers. So now we are at (8K+1) + (8W+1) = C. When simplified more with T-1.6, "The sum of two odd numbers is even" we can say,
+                2G = (8K+1) + (8W+1) = C, where G is some integer.
+                Now to show C is not a square number,
+                    "square root, C to the half" (C)^(1/2) = (2G)^1/2.
+                                                           = 2^(1/2) * G^(1/2)
+                                                           = 1.414 * G^(1/2)
+                We can NOT use the closure property here since 2^(1/2) is an irrational number, therefore A^2 + B^2 can not make a square integer.
+                Even is G was number that could be squared(G=T*T), we would still get 2*T*T, which clearly isn't a square integer.
+
+
+6.) Let A,B and C be integers such that gcd(a,b) = 1 and c|(a+b). Prove that gcd(c,a)       = gcd(c,b) = 1.
+
+        P=gcd(a,b) = 1 and c|(a+b)
+        Q=gcd(c,a) = gcd(c,b) = 1.
+
+        Proof. 
+                Let A,B, and C be integers. Suppose that gcd(a,b)=1 and that c|(a+b).
+                By Definition we can say that a and b are relatively prime or co-prime. We know that gcd(a,b)|a = a 
+                                       gcd(a,b)|b = b.
+                                       gcd(a,b)|a*b = a*b
+                                       
+                                T-1.1) gcd(a,b)|(a+b)
+                Since gcd(a,b)|(a + b) and c|(a+b) we can say gcd(a,b)|C.
+
+
+
+
+
+
+
+
+
+
+
