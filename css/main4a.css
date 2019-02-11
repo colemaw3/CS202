@@ -1,0 +1,176 @@
+/* Author - Justice Banson */
+/* Stylesheet for lesson5 */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+:root{
+    --main-color:#05a081;
+    --text-color:#fff;
+    --bg-1:#eee;
+    --bg-2:#333;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding: 0;
+    font-family: 'Raleway';
+    font-size: 20px !important;
+}
+.grid{
+    display: grid;
+    grid-template-areas: 
+    "nav nav nav"
+    "banner banner banner"
+    "main main main"
+    "section section section"
+    "footer footer footer"
+}
+
+.nav{
+    grid-area: nav;
+    
+    
+}
+.section{
+    grid-area: section;
+    margin: auto;
+    display: block;
+}
+.main{
+    grid-area: main;
+    margin: auto;
+    
+}
+.footer{
+    grid-area: footer;
+    margin: auto
+}
+.banner{
+    grid-area: banner;
+    
+}
+
+.nav{
+    background: transparent !important;
+    margin: auto;
+}
+.nav ul{
+    list-style-type: none;
+    display: flex;
+    margin:auto;
+    
+}
+.nav ul li{
+    display:flex;
+    padding:20px 25px 0px 25px;;
+}
+.nav a{
+    text-decoration: none;
+    color:var(--text-color);
+    display: block;
+    padding:1em;
+    text-align: center;
+    opacity: 0.8;/* New */ 
+    transition: all 0.3s;/* New */ 
+}
+.nav a:hover{
+    opacity: 1;/* New */ 
+    color: var( --main-color);/* New */ 
+}
+a:hover{
+    text-decoration: none !important;
+    color: var(--text-color);
+}
+.banner{
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    
+}
+.main{
+    padding: 4em 0;
+    background-color: var(--background-color);
+}
+.main-container{
+    display: flex;/* Modified */    
+}
+
+.floatleft{
+    flex: 1;/* Modified */   
+    padding:1em;
+}
+.floatright{
+    flex: 2;/* Modified */   
+    padding:1em;
+}
+.box-container{
+    display: flex;/* Modified */   
+}
+.box{
+    text-align: center;
+    padding: 2em 0;
+    margin: 1em;
+}
+.section-color{
+    color:var(--text-color);
+    background-color: var(--bg-2);
+    
+}
+.fas{
+    font-size: 3em;
+    padding: 0.5em;
+}
+.button{
+    background-color: var(--main-color);
+    color:var(--text-color);
+    padding: 0.5em 1em;
+    border-radius: 4px;   
+}
+
+.footer{
+    width: 100%;
+    padding: 2.6em;
+    text-align: center;
+}
+.label, #toggle{
+    display: none;
+}
+
+/* Media Queries For 760px */
+@media(max-width:760px){
+   .nav ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    display: none;
+    width: 80%;
+    top:3em;
+    background: rgba(0, 0, 0, 0.5);  
+   }
+   .icon:checked+.menu{
+       display: block;
+   }
+   /* Modified */   .fa-bars{
+       font-size: 26px;
+       color: var(--text-color);
+       float: right;
+       width:30px;
+   }
+   .label{
+       display: block;
+       cursor: pointer;
+   }
+   .main-container{
+       display: flex;/* New */   
+       flex-direction: column;   /* New */   
+   }
+   .box-container{
+       display: flex;/* New */ 
+       flex-direction: column;/* New */ 
+   }
+   .box{
+    padding:0;/* New */ 
+    margin:0; /* New */ 
+   }
+}
