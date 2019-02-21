@@ -12,9 +12,9 @@
 </head>
 
 <body>
+    <!-- Internal linking(2components): element with id , href for the id -->
     <div class="container">
         <div class="grid">
-            
 
             <!-- End of nav -->
             <div class="banner"><div class="nav">
@@ -24,17 +24,17 @@
                     <input type="checkbox" class="icon" id="toggle">
                     <!-- npm install --save-dev @fortawesome/fontawesome-free -->
                     <ul class="menu">
-                        <li><a href="lesson9.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="event.html">Events</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#home" class="scroll">Home</a></li>
+                        <li><a href="#about" class="scroll">About</a></li>
+                        <li><a href="#services" class="scroll">Events</a></li>
+                        <li><a href="#event" class="scroll">Gallery</a></li>
+                        <li><a href="#contact" class="scroll">Contact</a></li>
                     </ul>
                 </div></div>
-            <div class="main">
+            <div class="main" id="home">
                 <div class="main-container">
                     <div class="floatleft">
-                        <h3>Welcome To Our Website</h3>
+                        <h3 id="about">Welcome To Our Website</h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nostrum beatae quae rem earum
                             tenetur, quibusdam harum at iste aperiam eos adipisci minus ad illum officiis impedit
@@ -77,7 +77,7 @@
 
             <div class="section-color section">
                 <div class="container box-container">
-                    <div class="box">
+                    <div class="box" id="services">
                         <i class="fas fa-book"></i>
                         <h4>Knowledge is power</h4>
                         <p>
@@ -91,7 +91,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, et.
                         </p>
                     </div>
-                    <div class="box">
+                    <div class="box " id="event">
                         <i class="fas fa-chalkboard-teacher"></i>
                         <h4>Unmatched Proffessor</h4>
                         <p>
@@ -102,7 +102,7 @@
             </div>
 
             <div class="footer">
-                <div class="container">
+                <div id="contact" class="container">
                     <p>
                         Copyright &copy; 2019 Justice Banson
                     </p>
@@ -110,6 +110,8 @@
             </div>
         </div>
     </div>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/script2.js"></script>
 </body>
 
 </html>
